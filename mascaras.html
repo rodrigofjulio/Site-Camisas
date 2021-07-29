@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Mrs Saint Delafield' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <style>
+        header{
+            display: block;
+            padding: 0px;
+            border-bottom: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        nav{
+            display: block;
+            padding:4px;
+            border-bottom:4px;
+            border-bottom:2px solid;
+            margin:2px;
+            text-align: center;
+            font-size:18px;
+            font-family:Muli,Sans-serif;
+            margin:1px auto;
+           
+
+        }
+        .menu{
+            text-align: center;
+            margin: 1px auto;
+        }
+        .botao{
+            margin-top:0px;
+            margin-bottom:0px;
+            margin-left: 4px;
+            margin-right: 4px;
+            padding-top:0px;
+            padding-bottom:0px;
+            padding-left:4px;
+            padding-right: 4px;
+            width:120px;
+            display:inline-block;
+        }
+        section{
+            display: block;
+        }
+        footer{
+            border-top:2px solid;
+            clear: both;
+        }
+        body{
+            background-color: #551177;
+            color:#FFFF00;
+            font-size:16px;
+            font: Sans-serif ;
+            
+        }
+        a{
+            text-decoration: none;
+            color: #FFFF00;
+        }
+        a:visited{
+            color:#EEEE00;
+        }
+        .ender{
+            text-align: center;
+            font-size: 14px;
+            border-top: 2px solid;
+            padding: 10px;
+            border-top: 10px;
+        }
+        .imgLogo{
+            margin-bottom:4px;
+            padding-bottom:4px;
+        }
+        .temMascara{
+            text-align:left;
+            margin:auto;
+            font-size: 20px;
+            
+        }
+        .imgMasc{
+            border: 2px solid orange;
+            margin:10px;
+        }
+        ul.lisDescricao{
+            color:#FFFF00;
+            font-size:18px;
+            list-style-type:square;
+
+        }
+        
+        ul.lisCarac{
+            padding: 10px;
+            border-top: 10px;
+            list-style-image:url('img/Seta18.png'); /*Não consegui resolver isso aqui!!!*/
+            font-size:16px;
+            padding-left: 7%;
+            
+        }
+        li{
+            padding: 10px;
+            border-top: 10px;
+        }
+        #imgCorMasc{
+            height:30px;
+            width:30px;
+            margin:5px;
+            vertical-align: middle;
+            border: 2px solid orange;
+
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #bg{
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0,.8);
+            position: fixed;
+            display: none;
+        }
+        #bg:target{
+            display: block;
+        }
+        #bg:target ~ .box{
+            top:250px;
+            transition: all .3s;
+            transition-delay: .2s;
+
+
+        }
+        .janInfo{
+            width: 250px;
+            height: 300px;
+            vertical-align: middle;
+            text-align: center;
+            background-color:#551177 ;
+            position: fixed;
+            font-family: Arial,sans-serif;
+            font-size: 20px;
+            left: 50%;
+            
+        }
+        .imgMasc{
+            width: 150px;
+            height: 150px;
+            border: 2px solid orange;
+            position: relative;
+            text-align: center;
+            margin: auto;
+        }
+
+        #janInfo{
+            color:#fff;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration:none ;
+            font-size: 35px;
+            position: absolute;
+            background-color: #000;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            right:0;
+        }
+        #janInfo:hover{
+            opacity: .6;
+        }
+        #form_bicpic{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-color:;
+            left: 400px;
+
+
+        }
+        #bigpc-td{
+            background-color: #fff ;
+            width: 400px;
+        }
+        #bigpic{
+            height: 100%;
+            width: 100%;
+        }
+
+    </style>
+    <script type="text/javascript">
+
+        function picture(e){ 
+        var pic = "img/" + e.name
+        document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+        document.getElementById('bigpic').style.display='block';
+    
+        }
+    
+    
+    </script>
+</head>
+<body>
+    <header>
+        
+        <nav class="menu">
+            <div class="imgLogo">
+                <img src="img/LogoCOM_Topo.png">
+            </div>
+            <a href="index.html">Inicial</a>
+            <a href="mascaras.html">Mascaras</a>
+            <a href="camisas.html">Camisas</a>
+            <a href="compras.html">Compras</a>
+        </nav>
+    </header>
+    <section>
+        
+        <div class="temMascara">
+            <p>Tempo de Mascaras</p>
+        </div>
+        <div><ul class="lisDescricao"><li>Caracteristicas</li></ul></div>
+            <div id="form_bicpic" >
+                <form >
+                    <tr>
+                        <td id="bigpc-td">
+                            <img id="bigpic" src="bigpic" style="display:none;" />
+                        </td>
+                    </tr>
+                </form>
+            </div>    
+            <ul class="lisCarac">
+               
+                <li>Cores:  <img id="imgCorMasc" id="bigpc-td" src="img/Preto.png" name="img/MascaraPretaLado150.png" onclick={picture(this)}>  <img id="imgCorMasc" id="bigpc-td" src="img/Branco.png" name="img/MascaraBrancaLado150.png" onclick={picture(this)}> </li>
+                
+   
+    
+                <li>Três Camadas</li>
+                <li>Material: 100% Algodâo</li>
+                <li>Ajuste na nuca</li>
+                <li>Clip nasal interno ajustável</li>
+                <li>Tamanhos: P, M e G</li>
+                
+            </ul>
+
+        </div>
+        
+    <footer>
+        <div class="ender">
+            <p>Via Lactea, 1234 / Tel: (21) 98765-4321 / contato@camplanetas.com.br</p>
+            
+        </div>
+    </footer>
+</body>
+</html>

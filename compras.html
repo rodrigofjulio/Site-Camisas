@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Mrs Saint Delafield' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <style>
+        header{
+            display: block;
+            padding: 0px;
+            border-bottom: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        nav{
+            display: block;
+            padding:4px;
+            border-bottom:4px;
+            border-bottom:2px solid;
+            margin:2px;
+            text-align: center;
+            font-size:18px;
+            font-family:Muli,Sans-serif;
+            margin:1px auto;
+           
+
+        }
+        .menu{
+            text-align: center;
+            margin: 1px auto;
+        }
+        .botao{
+            margin-top:0px;
+            margin-bottom:0px;
+            margin-left: 4px;
+            margin-right: 4px;
+            padding-top:0px;
+            padding-bottom:0px;
+            padding-left:4px;
+            padding-right: 4px;
+            width:120px;
+            display:inline-block;
+        }
+        section{
+            display: block;
+        }
+        footer{
+            border-top:2px solid;
+            clear: both;
+        }
+        body{
+            background-color: #551177;
+            color:#FFFF00;
+            font-size:16px;
+            font: Sans-serif ;
+            
+        }
+        a{
+            text-decoration: none;
+            color: #FFFF00;
+        }
+        a:visited{
+            color:#EEEE00;
+        }
+        .ender{
+            text-align: center;
+            font-size: 14px;
+            border-top: 2px solid;
+            padding: 10px;
+            border-top: 10px;
+        }
+        .imgLogo{
+            margin-bottom:4px;
+            padding-bottom:4px;
+        }
+        .divCompras{
+            color: #2255AA;
+            border: 2px solid #77CCDD;
+            margin: 20px auto;
+            padding: 6px 6px 15px 6px;
+            background-color: #EEEEAA;
+            
+        }
+        .listaCompras{
+            float: right;
+            width: 230px;
+            height: 230px;
+            margin-top: 8px;
+            margin-left: 10px;
+            
+
+        }
+        .colLabSelProd{
+            width: 260px;
+            height: 40px;
+            float: left;
+        }
+        .colSelProd{
+            width: 160px;
+            float: right;
+        }
+        .linhaProdSel{
+            float: left;
+            width: 250px;
+            margin-bottom: 6px;
+        }
+        .elemEsq {  /* incluir no html  */
+            float: left;
+            display:block;
+        }
+        .elemDir {  /* incluir no html  */
+            float: right;
+            display: block;
+        }
+        .botoes {  /* incluir no html  */
+            text-align: right;
+            margin: 20px 10px 0px 10px;
+        }
+        .inpGrande { width: 400px; }
+        .inpMedio { width: 80px; }
+        .inpNCC { width: 130px; }
+        .inpTelef { width: 90px; }
+        .inpEnder { width: 200px; height: 60px; }
+        .numDD { width:30px; }
+        .numQD { width:50px; }
+
+        .fsEsq {
+            float: left;
+            display: inline;
+            margin: 0px 0px 0px 0px;
+        }   
+        .fsDir {
+            float: right;
+            display: inline;
+            margin: 0px 0px 0px 0px;
+        }
+        #real{
+            width:auto;
+            height:auto;
+            position: relative;
+            top:auto;
+            left:10%;
+
+        }
+        #relatorio{
+            float: right;
+            position: absolute;
+            top:40%;
+            left:57%;
+
+        }
+        .bnt1{
+            position: absolute;
+            left:60%;
+            top:79%;
+        }
+        .bnt2{
+            position: absolute;
+            left:70%;
+            top:79%;
+        }
+        .identificacao{
+            text-align: left;
+
+        }
+        #box{
+            position: relative;
+            width: 300px;
+            left: 22px;
+            float: center;
+            border-radius: 5px;
+        }
+       
+        #box2{
+            position: relative;
+            height: 90px;
+            left: 70px;
+            float: center;
+            top: -15px;
+            
+        }
+        #box3{
+            position: relative;
+            width: 300px;
+            left: 18px;
+            float: center;
+            border-radius: 5px;
+        }
+        #gen_field{
+            width: 190px;
+            height: 40px;
+            position: relative ;
+            float: right;
+        }
+        #nasc_field{
+            position: relative;
+            float: right;
+            width:190px;
+            height: 40px;
+        }
+        #label_tel{
+            float: left;
+        }
+        #tel{
+            margin-left: 10px;
+            width: 70px;
+            position: relative;
+            float: left;
+            border-radius: 5px;
+        }
+        #label_cel{
+            top:25px;
+            left: -150px;
+            float: left;
+            position: relative;
+
+        }
+        #cel{
+            top:25px;
+            left: -23.2%;
+            position: relative;
+            float:left;
+            width: 70px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <nav class="menu">
+            <div class="imgLogo">
+                <img src="img/LogoCOM_Topo.png">
+            </div>
+            <a href="index.html">Inicial</a>
+            <a href="mascaras.html">Mascaras</a>
+            <a href="mascaras.html">Camisas</a>
+            <a href="compras.html">Compras</a>
+        </nav>
+    </header>
+    <section>
+        <div class="divCompras">
+            <form action="6_Dados.html" method="POST">
+            <fieldset><legend>Identificação</legend>
+                <label class="Identificacao">Nome:</label>
+                <input type="text" id="box" value=""><br>
+                <label class="Identificacao">E-mail:</label>
+                <input type="text" id="box3" value=""><br>
+                <label class="Identificacao">Endereço:</label><br>
+                <textarea id="box2"></textarea>
+                    <fieldset id="gen_field"><legend>Genero:</legend>
+                        <form>
+                            <input type="radio" name="sex" value="male"> Mas
+                            <input type="radio" name="sex" value="female">Fem
+                            <input type="radio" name="sex" value="outro"> Outro
+                            </form>
+                    </fieldset>
+                    <fieldset id="nasc_field"><legend>Nascimento</legend>
+                        <form>
+                            <input type="date" name="sex" value="male">
+                        </form>
+                    </fieldset>
+                <label id="label_tel">Telefone:</label>
+                <input type="text" id="tel" value=""><br>    
+                <label id="label_cel">Celular:</label>
+                <input type="text" id="cel" value="">    
+
+            </fieldset>
+            <fieldset><legend> Seleção de Produtos 
+             e Lista de Compras&nbsp;</legend>
+            <textarea class="listaCompras" 
+             name="listaPedidos" readonly>
+            </textarea>
+            <fieldset><legend> Selecionado&nbsp;</legend>
+            <label class="colLabSelProd" >Produto:
+            <Select name="selProduto" class="colSelProd">
+             <option>---</option>
+             <optgroup label="Camisa">
+             <option value="CamLis">Lisa</option>
+             <option value="CamMer">Mercúrio</option>
+             <option value="CamVen">Venus</option>
+             <option value="CamTer">Terra</option>
+             <option value="CamMar">Marte</option>
+             <option value="CamJup">Jupiter</option>
+             <option value="CamSat">Saturno</option>
+             <option value="CamUra">Urano</option>
+             <option value="CamNet">Netuno</option>
+             <option value="CamPlu">Plutão</option></optgroup>
+             <optgroup label="Mascara">
+             <option value="MasLis">Lisa</option>
+             <option value="MasCom">Cometa</option></optgroup>
+            </select> </label>
+            <label class="colLabSelProd" >Tamanho:
+            <Select name="selTamanho" class="colSelProd">
+             <option>---</option>
+             <option value="P">Pequena</option>
+             <option value="M">Media</option> <option value="G">Grande</option>
+             <option value="GG">Extra Grande</option>
+            </select> </label>
+            <label class="colLabSelProd" >Cor: 
+            <Select name="selCor" class="colSelProd">
+             <option>---</option>
+             <option value="Preto">Preto</option>
+             <option value="Branco">Branco</option>
+             <option value="Azul">Azul</option>
+             <option value="Lilas">Lilas</option>
+            </select> </label>
+            <label class="colLabSelProd" >Modelo: 
+            <Select name="selModelo" class="colSelProd">
+             <option>---</option>
+             <option value="ModCom">T-Shirt</option>
+             <option value="ModBL">Baby Look</option>
+             <option value="ModSM">Sem Manga</option>
+            </select> </label>
+            <input class="linhaProdSel" type="text" 
+             name="TXTdesc" id="txtDesc" readonly />
+            <input class="elemEsq" type="button" value="Comprar" />
+            <label class="elemDir" for="TxtPreco">R$
+            <input type="text" name="TxtPreco" readonly
+             class="inpMedio" id="TxtPreco" /></label>
+            </fieldset>
+            <label class="elemDir" for="TxtTotal"><br/>Total R$
+            <input type="text" name="TxtTotal" readonly
+             id="TxtTotal" class="inpMedio" /></label>
+            </fieldset>
+            <div class="botoes">
+             <input type="submit" value="Continuar" />
+             <input type="reset" value="Limpar" />
+            </div></form></div>
+    </section>
+    <footer>
+        <div class="ender">
+            <p>Via Lactea, 1234 / Tel: (21) 98765-4321 / contato@camplanetas.com.br</p>
+            
+        </div>
+    </footer>
+</body>
+</html>

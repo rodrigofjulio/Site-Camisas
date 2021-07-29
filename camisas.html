@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Mrs Saint Delafield' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <style>
+        header{
+            display: block;
+            padding: 0px;
+            border-bottom: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        nav{
+            display: block;
+            padding:4px;
+            border-bottom:4px;
+            border-bottom:2px solid;
+            margin:2px;
+            text-align: center;
+            font-size:18px;
+            font-family:Muli,Sans-serif;
+            margin:1px auto;
+           
+
+        }
+        .menu{
+            text-align: center;
+            margin: 1px auto;
+        }
+        .botao{
+            margin-top:0px;
+            margin-bottom:0px;
+            margin-left: 4px;
+            margin-right: 4px;
+            padding-top:0px;
+            padding-bottom:0px;
+            padding-left:4px;
+            padding-right: 4px;
+            width:120px;
+            display:inline-block;
+        }
+        section{
+            display: block;
+        }
+        footer{
+            border-top:2px solid;
+            clear: both;
+        }
+        body{
+            background-color: #551177;
+            color:#FFFF00;
+            font-size:16px;
+            font: Sans-serif ;
+            
+        }
+        a{
+            text-decoration: none;
+            color: #FFFF00;
+        }
+        a:visited{
+            color:#EEEE00;
+        }
+        .ender{
+            text-align: center;
+            font-size: 14px;
+            border-top: 2px solid;
+            padding: 10px;
+            border-top: 10px;
+        }
+        .imgLogo{
+            height: auto;
+            width: auto;
+            margin-bottom:4px;
+            padding-bottom:4px;
+        }
+        .tabInfo{
+            border-collapse:collapse;
+            background-color:#FFFFCC;
+            color:#2255AA;
+            margin:auto;
+            font-family: 'open Sans', sans-serif;
+            text-align: center;
+        }
+        td , th{
+            border: 3px solid #77CCDD;
+            padding: 6px 6px 4px 6px;         
+        }
+        .linTH{
+            color:#ffffff;
+            background-color:#0099DD;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .colTH{ /* tamanhos das camisas*/
+            color:#005599;
+            background-color:#ffffff;
+            width:104px;
+            text-align:center;
+        }
+        img{
+            width: 100px;
+            height:100px;
+        }
+        .tabInterna{
+            width:100%;
+            margin:0%;
+            font-size: 13px;
+        }
+        .td.tabInterna{
+            width:50%;
+            font-size: 5px;
+        }
+       img.tabInterna{
+            width:25px;
+            height:25px;
+        }
+        span{
+            width: auto;
+            height: auto;
+            border-collapse:collapse;
+            color:#2255AA;
+            margin:1%;
+            border: 3px solid #77CCDD;
+            padding:5%;
+            
+
+        }
+        #imgcor{
+            width:25px;
+            height:25px;
+            border-collapse:collapse;
+            color:#2255AA;
+            margin:1%;
+            border: 3px solid #77CCDD;
+            padding:5%;
+
+        }
+        /* id da terceira coluna da tabela*/
+        #img{
+            width:250px;
+            height:712px;
+        }
+        #link_tab{
+            color:#2255AA;
+            text-decoration: none;
+            border: none;
+            outline:none;
+            background-color: transparent;
+        }
+        #bigpc-td{
+            background-color: #fff ;
+            width: 400px;
+        }
+        #bigpic{
+            height: 100%;
+            width: 100%;
+        }
+
+    </style>
+ <script type="text/javascript">
+
+    function picture(e){ 
+    var pic = "img/" + e.name
+    document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+    document.getElementById('bigpic').style.display='block';
+
+    }
+
+
+</script>
+</head>
+<body>
+    <header>
+        
+        <nav class="menu">
+            <div class="imgLogo">
+                <img src="img/LogoCOM_Topo.png">
+            </div>
+            <a href="index.html">Inicial</a>
+            <a href="mascaras.html">Mascaras</a>
+            <a href="mascaras.html">Camisas</a>
+            <a href="compras.html">Compras</a>
+        </nav>
+    </header>
+    <section>
+        <table class="tabInfo">
+            <tr>
+                <th colspan="4" class="linTH">Configuração de Camisas</th>
+            </tr>
+            <tr>
+                <td rowspan="10" class="colTH">Desenhos</td>
+                <td><p><button id="link_tab" name="ModeloLisa.png" onclick={picture(this)}>Lisa</button></p></td>
+                <td rowspan="10" colspan="2" id="bigpc-td"><img id="bigpic" src="bigpic" style="display:none;" />
+                </td>
+                
+            </tr>
+            <tr>
+                <td><p><button id="link_tab" name="ModeloMercurio.png" onclick={picture(this)}>Merúrio</button></p></td>
+            </tr>
+            <tr>
+                <td><p><button id="link_tab" name="ModeloVenus.png" onclick={picture(this)}>Vênus</button></p></td>                
+            </tr>
+            <tr>
+                <td><p><button id="link_tab" name="ModeloTerra.png" onclick={picture(this)}  href="">Terra</button></p></td>
+            </tr>
+            <tr>
+                <td><p><button id="link_tab" name="ModeloMarte.png" onclick={picture(this)}  href="">Marte</button></p></td>
+            </tr>
+            <tr>
+                <td><p><button id="link_tab" name="ModeloJupiter.png" onclick={picture(this)}  href="">Jupiter</button></p></td>
+            </tr>
+            <tr>
+                <td><p><button id="link_tab" name="ModeloSaturno.png" onclick={picture(this)}  href="">Saturno</button></p></td>
+            </tr>
+            <tr>
+                <td><p><button id="link_tab" name="ModeloUrano.png" onclick={picture(this)}  href="">Urano</button></p></td>
+            </tr>
+            <tr>
+                <td><p><button id="link_tab" name="ModeloNetuno.png" onclick={picture(this)}  href="">Netuno</button></p></td>
+            </tr>
+            <tr>
+                <td><p><button id="link_tab" name="ModeloPlutao.png" onclick={picture(this)}  href="">Plutao</button></p></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="linTH"></td>
+            </tr>
+            <tr>
+                <td class="colTH">Modelos de Manga</td>
+                <td>T-Shirt</td>
+                <td>Baby Look</td>
+                <td>Sem Manga</td>
+            </tr>
+            <tr>
+                <td colspan="4" class="linTH"></td>
+            </tr>
+            <tr  class="tabInterna">
+                <td class="colTH">Tamanhos</td>
+                <td class="td.tabInterna">
+                    <span>P</span>
+                    <span>M</span><br><br>
+                    <span>G</span>
+                    <span>GG</span>
+
+                </td>
+                <td class="colTH">Cores</td>
+                <td>
+                    <img id="imgcor" src="img/Azul.png" width="25px" height="25px">
+                    <img id="imgcor" src="img/Lilas.png" width="25px" height="25px"><br>
+                    <img id="imgcor" src="img/Preto.png" width="25px" height="25px">
+                    <img id="imgcor" src="img/Branco.png" width="25px" height="25px">
+                </td>
+            </tr>
+
+        </table>
+        
+    </section>
+    <footer>
+        <div class="ender">
+            <p>Via Lactea, 1234 / Tel: (21) 98765-4321 / contato@camplanetas.com.br</p>
+            
+        </div>
+    </footer>
+</body>
+</html>

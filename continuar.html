@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Mrs Saint Delafield' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <style>
+        header{
+            display: block;
+            padding: 0px;
+            border-bottom: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        nav{
+            display: block;
+            padding:4px;
+            border-bottom:4px;
+            border-bottom:2px solid;
+            margin:2px;
+            text-align: center;
+            font-size:18px;
+            font-family:Muli,Sans-serif;
+            margin:1px auto;
+           
+
+        }
+        .menu{
+            text-align: center;
+            margin: 1px auto;
+        }
+        .botao{
+            margin-top:0px;
+            margin-bottom:0px;
+            margin-left: 4px;
+            margin-right: 4px;
+            padding-top:0px;
+            padding-bottom:0px;
+            padding-left:4px;
+            padding-right: 4px;
+            width:120px;
+            display:inline-block;
+        }
+        section{
+            display: block;
+        }
+        footer{
+            border-top:2px solid;
+            clear: both;
+        }
+        body{
+            background-color: #551177;
+            color:#FFFF00;
+            font-size:16px;
+            font: Sans-serif ;
+            
+        }
+        a{
+            text-decoration: none;
+            color: #FFFF00;
+        }
+        a:visited{
+            color:#EEEE00;
+        }
+        .ender{
+            text-align: center;
+            font-size: 14px;
+            border-top: 2px solid;
+            padding: 10px;
+            border-top: 10px;
+        }
+        .imgLogo{
+            margin-bottom:4px;
+            padding-bottom:4px;
+        }
+        .apres{
+            text-align:center;
+            font-size:18px;
+        }
+        .divCompras{
+            color: #2255AA;
+            border: 2px solid #77CCDD;
+            margin: 20px auto;
+            padding: 6px 6px 15px 6px;
+            background-color: #EEEEAA;
+            
+        }
+
+        .divLinha {
+            margin-bottom: 6px;
+        }
+        .colPri {
+            float: left;
+            width: 90px;
+            display: block;
+        }   
+        .colPriCompras {
+            float: left;
+            width: 86px;
+            display: block;
+        }
+        .colPriPag {
+            float: left;
+            width: 250px;
+            display: block;
+        }
+        .comprasFeitas {
+            float: right;
+            width: 230px;
+            height: 180px;
+            margin-top: 8px;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        
+        <nav class="menu">
+            <div class="imgLogo">
+                <img src="img/LogoCOM_Topo.png">
+            </div>
+            <a href="index.html">Inicial</a>
+            <a href="mascaras.html">Mascaras</a>
+            <a href="camisas.html">Camisas</a>
+            <a href="compras.html">Compras</a>
+        </nav>
+    </header>
+    <section>
+        <div class="divCompras">
+            <form method="POST">
+            <fieldset><legend> Identificação&nbsp;</legend>
+            <div class="divLinha">
+            <label class="colPri">Nome: </label>
+            <input type="text" class="inpGrande"
+             name="TxtNomeCompleto" />
+            </div>
+            <div class="divLinha">
+            <label for="idEmail" class="colPri">E-mail:</label>
+            <input id="idEmail" class="inpGrande"
+             type="email" name="TxtEmail" required />
+            </div>
+            <div class="divLinha">
+            <label class="colPri">Endereço: </label>
+            <textarea name="TxtEnder" rows="2" class="inpEnder"></textarea>
+            <fieldset class="fsDir"><legend>Genero:</legend>
+            <label><input type="radio" name="TglSexo"
+             value="M" checked />Mas</label>
+            <label><input type="radio" name="TglSexo"
+             value="F" />Fem</label>
+            <label><input type="radio" name="TglSexo"
+             value="O" />Outro</label>
+            </fieldset>
+            </div> <fieldset class="fsDir"><legend>Nacimento:</legend>
+            <input type="number" name="TxtDiaNasc" 
+             min="1" max="31" class="numDD" /> /
+            <input type="number" name="TxtMesNasc" 
+             min="1" max="12" class="numDD" /> /
+            <input type="number" name="TxtAnoNasc" value="1980" 
+             min="1920" max="2002" class="numQD" />
+            </fieldset>
+            <div class="divLinha">
+            <label class="colPri">Telefone:</label>
+            <input type="text" class="inpTelef"
+             name="TxtTelefone" required />
+            </div>
+            <div class="divLinha">
+            <label class="colPri">Celular:</label>
+            <input type="text" class="inpTelef"
+             name="TxtCelular" />
+            </div>
+            </fieldset>
+            <fieldset><legend> Pagamento&nbsp;</legend>
+            <textarea class="comprasFeitas" name="listaPedidos"
+             readonly>
+            </textarea>
+            <fieldset class="fsEsq"><legend> Cartão&nbsp;</legend>
+            <fieldset class="fsEsq">
+            <legend> Bandeira:</legend>
+            <label><input type="radio" name="RadBand" checked />Visa</label>
+            <label><input type="radio" name="RadBand" />Master</label>
+            <label><input type="radio" name="RadBand" />Elo</label>
+            </fieldset>
+            <br/><br/><br/><br/>
+            <div>
+            <label class="colPriCompras" for="mesVal">Validade:</label>
+            <input type="number" name="TxtMesVal" id="mesVal" 
+             min="1" max="12" class="numDD" value="4" /> /
+            <input type="number" name="TxtAnoVal" value="2021" 
+             min="2021" max="2030" class="numQD" /></div>
+            <div>
+            <br/>
+            <label class="colPriCompras" for="numCar">Número:</label>
+            <input type=text name="TxtNumCard" 
+             class="inpNCC" id="numCar"/>
+            </div></fieldset>
+            <label class="elemDir" for="TxtTotal"><br/>Valor R$
+            <input type="text" name="TxtTotal" readonly
+             id="TxtTotal" class="inpMedio" /></label>
+            </fieldset>
+            <div class="botoes">
+             <input type="submit" value="Enviar" />
+             <input type="reset" value="Limpar" />
+            </div></form></div>
+    </section>
+    <footer>
+        <div class="ender">
+            <p>Via Lactea, 1234 / Tel: (21) 98765-4321 / contato@camplanetas.com.br</p>
+            
+        </div>
+    </footer>
+</body>
+</html>
